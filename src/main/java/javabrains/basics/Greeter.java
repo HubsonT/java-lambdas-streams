@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package javabrains.unit1;
+package javabrains.basics;
 
 /**
  *
@@ -31,6 +31,8 @@ public class Greeter {
         };
         
         innerClassGreeting.perform();
+        //lub
+        greeter.greet(innerClassGreeting);
         
         //to samo zapisane jako Lambda
         Greeting lambdaGreeting = () -> System.out.println("Hello World!");
