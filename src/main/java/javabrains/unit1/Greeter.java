@@ -18,9 +18,25 @@ public class Greeter {
     
     public static void main(String[] args) {
         Greeter greeter = new Greeter();
+        //Greeting helloWorldGreeting = new HelloWorldGreeting();
+        //greeter.greet(helloWorldGreeting);
         
-        greeter.greet(new HelloWorldGreeting());
         
+        //to co powyżej można zrobić za pomocą klasy anonimowej i pozbyć się nadmiarowej klasy HelloWorldGreeting
+        Greeting innerClassGreeting = new Greeting() {
+            @Override
+            public void perform() {
+                System.out.println("Hello World!");
+            }
+        };
+        
+        innerClassGreeting.perform();
+        
+        //to samo zapisane jako Lambda
+        Greeting lambdaGreeting = () -> System.out.println("Hello World!");
+        greeter.greet(lambdaGreeting);
+        //to samo można wywołać tak:
+        lambdaGreeting.perform();
     }
     
 }
