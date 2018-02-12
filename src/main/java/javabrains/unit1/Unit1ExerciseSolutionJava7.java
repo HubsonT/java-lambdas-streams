@@ -14,20 +14,29 @@ public class Unit1ExerciseSolutionJava7 {
             new Person("Thomas", "Carlyle", 51),
             new Person("Charlote", "Bronte", 45),
             new Person("Matthew", "Arnold", 39));
-	System.out.println(people);
+	
 
-// Step 1 - sort list by last name:
+        printAll(people);
+    
+        // Step 1 - sort list by last name:
 	Collections.sort(people, new Comparator<Person>() {
-        	@Override
-	public int compare(Person o1, Person o2) {
-            return o1.getLastName().compareTo(o2.getLastName());
+            @Override
+            public int compare(Person o1, Person o2) {
+                return o1.getLastName().compareTo(o2.getLastName());
             }
 	});
         
-        System.out.println(people);
-// Step 2 - create a method that prints all the elements in the list
-
-// Step 3 - create a method that prints all the people that have last name beginning with C
+        printAll(people);
 }
+
+// Step 2 - create a method that prints all the elements in the list
+    private static void printAll(List<Person> people) {
+        for(Person p: people){
+            System.out.print(p);
+        }
+    }
+    
+// Step 3 - create a method that prints all the people that have last name beginning with C
+    
 
 }
