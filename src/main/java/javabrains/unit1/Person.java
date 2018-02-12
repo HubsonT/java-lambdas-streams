@@ -37,7 +37,14 @@ public class Person {
 
 	@Override
 	public String toString() {
-		return "Person [firstName=" + firstName + ", lastName=" + lastName + ", age=" + age + "]";
+		return "[" + firstName + "," + lastName + "," + age + "]";
 	}
+
+	// @Override
+	// public String toString() {
+	// ToStringBuilder builder = new ToStringBuilder(this,
+	// ToStringStyle.NO_CLASS_NAME_STYLE);
+	// return builder.append(firstName).append(lastName).append(age).toString();
+	// }
 
 }
