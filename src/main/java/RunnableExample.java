@@ -25,5 +25,4 @@ public class RunnableExample {
         
         myLambdaThread.start();
     }
-    
 }
