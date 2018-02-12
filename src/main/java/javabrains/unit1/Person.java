@@ -1,5 +1,8 @@
 package javabrains.unit1;
 
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
+
 public class Person {
 	private String firstName;
 	private String lastName;
@@ -35,16 +38,14 @@ public class Person {
 		this.age = age;
 	}
 
-	@Override
-	public String toString() {
-		return "[" + firstName + "," + lastName + "," + age + "]";
-	}
+//	@Override
+//	public String toString() {
+//		return "[" + firstName + "," + lastName + "," + age + "]";
+//	}
 
-	// @Override
-	// public String toString() {
-	// ToStringBuilder builder = new ToStringBuilder(this,
-	// ToStringStyle.NO_CLASS_NAME_STYLE);
-	// return builder.append(firstName).append(lastName).append(age).toString();
-	// }
-
+	 @Override
+	 public String toString() {
+	 ToStringBuilder builder = new ToStringBuilder(this, ToStringStyle.NO_CLASS_NAME_STYLE);
+	 return builder.append(firstName).append(lastName).append(age).toString();
+	 }
 }
