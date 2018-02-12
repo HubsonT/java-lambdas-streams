@@ -17,8 +17,9 @@ public class Unit1ExerciseSolutionJava7 {
 	
 
         printAll(people);
+        System.out.println("");
     
-        // Step 1 - sort list by last name:
+// Step 1 - sort list by last name:
 	Collections.sort(people, new Comparator<Person>() {
             @Override
             public int compare(Person o1, Person o2) {
@@ -27,6 +28,9 @@ public class Unit1ExerciseSolutionJava7 {
 	});
         
         printAll(people);
+        System.out.println();
+        System.out.println("All the people that have last name beginning with C");
+        printLastNameBeginningWithC(people);
 }
 
 // Step 2 - create a method that prints all the elements in the list
@@ -37,6 +41,13 @@ public class Unit1ExerciseSolutionJava7 {
     }
     
 // Step 3 - create a method that prints all the people that have last name beginning with C
+    private static void printLastNameBeginningWithC(List<Person> people) {
+        for (Person p: people) {
+            if (p.getLastName().startsWith("C")) {
+                System.out.print(p);
+            }
+        }
+    }
     
 
 }
