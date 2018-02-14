@@ -29,8 +29,8 @@ public class StandardFuctionalInterfacesExample {
 		System.out.println("\nPrint conditionally - all the people that have last name beginning with C");
 		performConditionally(people, p -> p.getLastName().startsWith("C"), p -> System.out.println(p));
 
-		System.out.println("\nPrint conditionally - all the people that have first name beginning with C");
-		performConditionally(people, p -> p.getFirstName().startsWith("C"), p -> System.out.println(p));
+		System.out.println("\nPrint conditionally - all the names of the people that have first name beginning with C");
+		performConditionally(people, p -> p.getFirstName().startsWith("C"), p -> System.out.println(p.getFirstName()));
 
 	}
 
