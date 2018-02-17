@@ -9,7 +9,7 @@ public class MethodReferenceExample1 {
 	}
 
 	public static void printMessage() {
-		System.out.println("Hi there");
+		System.out.println("Hello");
 	}
 
 }
