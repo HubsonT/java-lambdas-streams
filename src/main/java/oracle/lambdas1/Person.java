@@ -119,6 +119,14 @@ public class Person {
 					+ "Address: " + address + "\n");
 	}
 
+	public void printName() {
+		System.out.println("Name: " + givenName + " " + surName);
+	}
+
+	public static void printNamesFromTheList(List<Person> list) {
+		list.stream().forEach(p -> System.out.println(p.getGivenName() + " " + p.getSurName()));
+	}
+
 	public static List<Person> createShortList() {
 		List<Person> people = new ArrayList<>();
 
