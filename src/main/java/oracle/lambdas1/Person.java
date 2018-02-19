@@ -2,6 +2,7 @@ package oracle.lambdas1;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Function;
 
 public class Person {
 	private String givenName;
@@ -125,6 +126,28 @@ public class Person {
 
 	public static void printNamesFromTheList(List<Person> list) {
 		list.stream().forEach(p -> System.out.println(p.getGivenName() + " " + p.getSurName()));
+	}
+
+	public void printWesternName() {
+
+		System.out.println("\nName: " + this.getGivenName() + " " + this.getSurName() + "\n" +
+				"Age: " + this.getAge() + "  " + "Gender: " + this.getGender() + "\n" +
+				"EMail: " + this.geteMail() + "\n" +
+				"Phone: " + this.getPhone() + "\n" +
+				"Address: " + this.getAddress());
+	}
+
+	public void printEasternName() {
+
+		System.out.println("\nName: " + this.getSurName() + " " + this.getGivenName() + "\n" +
+				"Age: " + this.getAge() + "  " + "Gender: " + this.getGender() + "\n" +
+				"EMail: " + this.geteMail() + "\n" +
+				"Phone: " + this.getPhone() + "\n" +
+				"Address: " + this.getAddress());
+	}
+
+	public String printCustom(Function<Person, String> f) {
+		return f.apply(this);
 	}
 
 	public static List<Person> createShortList() {
