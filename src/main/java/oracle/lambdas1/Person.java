@@ -212,7 +212,7 @@ public class Person {
 				.surName("Smith")
 				.age(55)
 				.gender(Gender.MALE)
-				.eMail("phil.smith@examp;e.com")
+				.eMail("phil.smith@example.com")
 				.phone("222-33-1234")
 				.address("22 2nd St, New Park, CO 222333")
 				.build());
