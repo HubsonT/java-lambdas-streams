@@ -68,5 +68,13 @@ public class Human {
 			return false;
 		return true;
 	}
+        
+        public static int compareByNameThenAge(Human lhs, Human rhs ) {
+            if (lhs.getName().equals(rhs.getName())) {
+                return lhs.getAge() - rhs.getAge();
+            }
+            return lhs.getName().compareTo(rhs.getName());
+            
+        }
 
 }
